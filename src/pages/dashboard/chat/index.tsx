@@ -7,7 +7,7 @@ import { Chat } from '../../../sections/@dashboard/chat';
 
 // ----------------------------------------------------------------------
 
-ChatPage.getLayout = (page: React.ReactElement) => <DashboardLayout>{page}</DashboardLayout>;
+// ChatPage.getLayout = (page: React.ReactElement) => <DashboardLayout>{page}</DashboardLayout>;
 
 // ----------------------------------------------------------------------
 

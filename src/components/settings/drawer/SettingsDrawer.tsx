@@ -27,7 +27,12 @@ import ColorPresetsOptions from './ColorPresetsOptions';
 
 const SPACING = 2.5;
 
-export default function SettingsDrawer() {
+type Props = {
+  open: boolean;
+  handleClose: VoidFunction;
+};
+
+export default function SettingsDrawer({ open, handleClose }: Props) {
   const {
     themeMode,
     themeLayout,
@@ -40,16 +45,6 @@ export default function SettingsDrawer() {
 
   const theme = useTheme();
 
-  const [open, setOpen] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const notDefault =
     themeMode !== defaultSettings.themeMode ||
     themeLayout !== defaultSettings.themeLayout ||
@@ -60,7 +55,7 @@ export default function SettingsDrawer() {
 
   return (
     <>
-      {!open && <ToggleButton open={open} notDefault={notDefault} onToggle={handleToggle} />}
+      {/* {!open && <ToggleButton open={open} notDefault={notDefault} onToggle={handleToggle} />} */}
 
       <Drawer
         anchor="right"
@@ -85,7 +80,7 @@ export default function SettingsDrawer() {
           sx={{ py: 2, pr: 1, pl: SPACING }}
         >
           <Typography variant="subtitle1" sx={{ flexGrow: 1 }}>
-            Settings
+            Cài đặt
           </Typography>
 
           <Tooltip title="Reset">
@@ -105,27 +100,27 @@ export default function SettingsDrawer() {
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Scrollbar sx={{ p: SPACING, pb: 0 }}>
-          <Block title="Mode">
+          <Block title="Chế độ">
             <ModeOptions />
           </Block>
 
-          <Block title="Contrast">
+          <Block title="Tương phản">
             <ContrastOptions />
           </Block>
 
-          <Block title="Direction">
+          <Block title="Bố trí">
             <DirectionOptions />
           </Block>
 
-          <Block title="Layout">
+          <Block title="Thanh điều hướng">
             <LayoutOptions />
           </Block>
 
-          <Block title="Stretch" tooltip="Only available at large resolutions > 1600px (xl)">
+          <Block title="Mở rộng" tooltip="Khả dụng ở màn hình rộng hơn 1600px (xl)">
             <StretchOptions />
           </Block>
 
-          <Block title="Presets">
+          <Block title="Màu chủ đề">
             <ColorPresetsOptions />
           </Block>
         </Scrollbar>

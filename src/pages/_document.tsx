@@ -24,20 +24,25 @@ export default class MyDocument extends Document {
 
           {/* Favicon */}
           <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon.png" />
 
           {/* Emotion */}
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
 
           {/* Meta */}
-          <meta
-            name="description"
-            content="The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI ©, ready to be customized to your style"
-          />
+          <meta name="description" content="Phần mềm học trực tuyến" />
           <meta name="keywords" content="react,material,kit,application,dashboard,admin,template" />
-          <meta name="author" content="Minimal UI Kit" />
+          <meta name="author" content="GD Việt Nam" />
+
+          <meta property="og:image" content="/logo/share.jpg" />
+          <meta property="og:image:alt" content="/logo/share.jpg" />
+          <meta property="og:title" content="Phần mềm hỗ trợ dạy và học trực tuyến GD Việt Nam" />
+          <meta
+            property="og:description"
+            content="Phần mềm quản lý hỗ trợ dạy và học trực tuyến GD Việt Nam"
+          />
         </Head>
 
         <body>

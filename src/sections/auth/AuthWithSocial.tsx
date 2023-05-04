@@ -55,18 +55,20 @@ export default function AuthWithSocial() {
           },
         }}
       >
-        OR
+        HOẶC
       </Divider>
 
       <Stack direction="row" justifyContent="center" spacing={2}>
+        {' '}
+        <IconButton onClick={handleGoogleLogin}>
+          <Iconify icon="ic:outline-facebook" color="#1C9CEA" />
+        </IconButton>
         <IconButton onClick={handleGoogleLogin}>
           <Iconify icon="eva:google-fill" color="#DF3E30" />
         </IconButton>
-
         <IconButton color="inherit" onClick={handleGithubLogin}>
           <Iconify icon="eva:github-fill" />
         </IconButton>
-
         <IconButton onClick={handleTwitterLogin}>
           <Iconify icon="eva:twitter-fill" color="#1C9CEA" />
         </IconButton>

@@ -111,8 +111,8 @@ export default function Chat() {
   };
 
   return (
-    <Container maxWidth={themeStretch ? false : 'xl'}>
-      <CustomBreadcrumbs
+    <Container style={{padding: 0}} maxWidth={false}>
+      {/* <CustomBreadcrumbs
         heading="Chat"
         links={[
           {
@@ -121,9 +121,9 @@ export default function Chat() {
           },
           { name: 'Chat' },
         ]}
-      />
+      /> */}
 
-      <Card sx={{ height: '72vh', display: 'flex' }}>
+      <Card sx={{ height: '100vh', display: 'flex' }}>
         <ChatNav conversations={conversations} activeConversationId={activeConversationId} />
 
         <Stack flexGrow={1} sx={{ overflow: 'hidden' }}>

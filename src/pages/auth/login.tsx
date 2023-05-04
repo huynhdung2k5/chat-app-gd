@@ -12,7 +12,7 @@ export default function LoginPage() {
   return (
     <>
       <Head>
-        <title> Login | Minimal UI</title>
+        <title> Chat GD Việt Nam </title>
       </Head>
 
       <GuestGuard>

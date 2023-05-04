@@ -8,8 +8,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 // @mui
 import { Link, Stack, Alert, IconButton, InputAdornment } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-// routes
-import { PATH_AUTH } from '../../routes/paths';
 // auth
 import { useAuthContext } from '../../auth/useAuthContext';
 // components
@@ -90,18 +88,18 @@ export default function AuthLoginForm() {
       <Stack alignItems="flex-end" sx={{ my: 2 }}>
         <Link
           component={NextLink}
-          href={PATH_AUTH.resetPassword}
+          href="https://gdvietnam.com"
           variant="body2"
           color="inherit"
           underline="always"
         >
-          Forgot password?
+          Quên mật khẩu
         </Link>
       </Stack>
 
       <LoadingButton
         fullWidth
-        color="inherit"
+        color="secondary"
         size="large"
         type="submit"
         variant="contained"
@@ -115,7 +113,7 @@ export default function AuthLoginForm() {
           },
         }}
       >
-        Login
+        ĐĂNG NHẬP
       </LoadingButton>
     </FormProvider>
   );
